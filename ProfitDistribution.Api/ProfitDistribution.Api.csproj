@@ -11,5 +11,15 @@
     <Folder Include="App\Http\Controllers\" />
     <Folder Include="App\Models\" />
     <Folder Include="docker\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Dependencies\" />
+    <Folder Include="Core\Modules\" />
+    <Folder Include="Core\Modules\Distribution\" />
+    <Folder Include="Core\Modules\Distribution\Entities\" />
+    <Folder Include="Core\Modules\Distribution\Gateways\" />
+    <Folder Include="Core\Modules\Distribution\Rules\" />
+    <Folder Include="Core\Dependencies\Gateways\" />
+    <Folder Include="App\Adapters\" />
+    <Folder Include="App\Http\Response\" />
   </ItemGroup>
 </Project>

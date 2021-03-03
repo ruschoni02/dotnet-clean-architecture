@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProfitDistribution.Api.App.Models;
 
-namespace ProfitDistribution.Api.Controllers
+namespace ProfitDistribution.Api.App.HttpControllers
 {
     [ApiController]
     [Route("[controller]")]

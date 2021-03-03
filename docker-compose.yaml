@@ -1,0 +1,10 @@
+﻿version: '3.4'
+
+services:
+  proft-distribution-api:
+    container_name: "proft-distribution-api"
+    build:
+      context: .
+      dockerfile: ProfitDistribution.Api/docker/Dockerfile
+    ports:
+      - "5001:80"

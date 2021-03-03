@@ -5,4 +5,11 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <Folder Include="App\" />
+    <Folder Include="App\Http\" />
+    <Folder Include="App\Http\Controllers\" />
+    <Folder Include="App\Models\" />
+    <Folder Include="docker\" />
+  </ItemGroup>
 </Project>

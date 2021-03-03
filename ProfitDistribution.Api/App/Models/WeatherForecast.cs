@@ -1,6 +1,6 @@
 using System;
 
-namespace ProfitDistribution.Api
+namespace ProfitDistribution.Api.App.Models
 {
     public class WeatherForecast
     {

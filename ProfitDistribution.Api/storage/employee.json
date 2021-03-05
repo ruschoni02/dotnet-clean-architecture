@@ -1,0 +1,178 @@
+﻿[
+    {
+        "area": "Diretoria",
+        "cargo": "Diretor Financeiro",
+        "data_de_admissao": "2012-01-05",
+        "matricula": "0009968",
+        "nome": "Victor Wilson",
+        "salario_bruto": "R$ 12.696,20"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Auxiliar de Contabilidade",
+        "data_de_admissao": "2015-01-05",
+        "matricula": "0004468",
+        "nome": "Flossie Wilson",
+        "salario_bruto": "R$ 1.396,52"
+    },
+    {
+        "area": "Relacionamento com o Cliente",
+        "cargo": "Líder de Relacionamento",
+        "data_de_admissao": "2015-06-07",
+        "matricula": "0008174",
+        "nome": "Sherman Hodges",
+        "salario_bruto": "R$ 3.899,74"
+    },
+    {
+        "area": "Financeiro",
+        "cargo": "Contador Pleno",
+        "data_de_admissao": "2018-01-03",
+        "matricula": "0007463",
+        "nome": "Charlotte Romero",
+        "salario_bruto": "R$ 3.199,82"
+    },
+    {
+        "area": "Financeiro",
+        "cargo": "Economista Júnior",
+        "data_de_admissao": "2016-08-27",
+        "matricula": "0005253",
+        "nome": "Wong Austin",
+        "salario_bruto": "R$ 2.215,04"
+    },
+    {
+        "area": "Diretoria",
+        "cargo": "Auxiliar Administrativo",
+        "data_de_admissao": "2015-10-17",
+        "matricula": "0004867",
+        "nome": "Danielle Blanchard",
+        "salario_bruto": "R$ 2.768,28"
+    },
+    {
+        "area": "Serviços Gerais",
+        "cargo": "Atendente de Almoxarifado",
+        "data_de_admissao": "2016-04-21",
+        "matricula": "0001843",
+        "nome": "Daugherty Kramer",
+        "salario_bruto": "R$ 2.120,08"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Auxiliar de Contabilidade",
+        "data_de_admissao": "2015-06-21",
+        "matricula": "0007961",
+        "nome": "Francesca Hewitt",
+        "salario_bruto": "R$ 2.101,68"
+    },
+    {
+        "area": "Diretoria",
+        "cargo": "Auxiliar Administrativo",
+        "data_de_admissao": "2014-07-27",
+        "matricula": "0006806",
+        "nome": "Ella Hale",
+        "salario_bruto": "R$ 2.571,73"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Contador Júnior",
+        "data_de_admissao": "2016-09-08",
+        "matricula": "0005961",
+        "nome": "Jillian Odonnell",
+        "salario_bruto": "R$ 2.671,26"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Economista Pleno",
+        "data_de_admissao": "2017-10-19",
+        "matricula": "0007293",
+        "nome": "Morton Battle",
+        "salario_bruto": "R$ 4.457,08"
+    },
+    {
+        "area": "Financeiro",
+        "cargo": "Estagiário",
+        "data_de_admissao": "2015-03-16",
+        "matricula": "0002105",
+        "nome": "Dorthy Lee",
+        "salario_bruto": "R$ 1.491,45"
+    },
+    {
+        "area": "Financeiro",
+        "cargo": "Estagiário",
+        "data_de_admissao": "2016-09-20",
+        "matricula": "0000273",
+        "nome": "Petersen Coleman",
+        "salario_bruto": "R$ 1.426,13"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Auxiliar Administrativo",
+        "data_de_admissao": "2016-09-16",
+        "matricula": "0007361",
+        "nome": "Avila Kane",
+        "salario_bruto": "R$ 2.166,25"
+    },
+    {
+        "area": "Relacionamento com o Cliente",
+        "cargo": "Atendente",
+        "data_de_admissao": "2014-10-27",
+        "matricula": "0004237",
+        "nome": "Hess Sloan",
+        "salario_bruto": "R$ 2.266,46"
+    },
+    {
+        "area": "Contabilidade",
+        "cargo": "Auxiliar Administrativo",
+        "data_de_admissao": "2014-07-15",
+        "matricula": "000538",
+        "nome": "Ashlee Wood",
+        "salario_bruto": "R$ 2.330,19"
+    },
+    {
+        "area": "Diretoria",
+        "cargo": "Diretor Tecnologia",
+        "data_de_admissao": "2016-07-05",
+        "matricula": "0014319",
+        "nome": "Abraham Jones",
+        "salario_bruto": "R$ 18.053,25"
+    },
+    {
+        "area": "Tecnologia",
+        "cargo": "Jovem Aprendiz",
+        "data_de_admissao": "2014-08-27",
+        "matricula": "0006335",
+        "nome": "Beulah Long",
+        "salario_bruto": "R$ 1.019,88"
+    },
+    {
+        "area": "Serviços Gerais",
+        "cargo": "Copeiro",
+        "data_de_admissao": "2018-01-17",
+        "matricula": "0007676",
+        "nome": "Maricela Martin",
+        "salario_bruto": "R$ 1.591,69"
+    },
+    {
+        "area": "Financeiro",
+        "cargo": "Analista de Finanças",
+        "data_de_admissao": "2014-01-26",
+        "matricula": "0002949",
+        "nome": "Stephenson Stone",
+        "salario_bruto": "R$ 5.694,14"
+    },
+    {
+        "area": "Relacionamento com o Cliente",
+        "cargo": "Auxiliar de Ouvidoria",
+        "data_de_admissao": "2017-03-31",
+        "matricula": "0008601",
+        "nome": "Taylor Mccarthy",
+        "salario_bruto": "R$ 1.800,16"
+    },
+    {
+        "area": "Relacionamento com o Cliente",
+        "cargo": "Líder de Ouvidoria",
+        "data_de_admissao": "2016-12-06",
+        "matricula": "0006877",
+        "nome": "Cross Perkins",
+        "salario_bruto": "R$ 3.371,47"
+    }
+]

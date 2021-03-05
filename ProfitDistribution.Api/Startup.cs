@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProfitDistribution.Api.App.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProfitDistribution.Api
 {
@@ -18,6 +20,7 @@ namespace ProfitDistribution.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<InMemoryDataContext>(opt => opt.UseInMemoryDatabase("Database"));
             services.AddControllers();
         }
 
@@ -28,8 +31,6 @@ namespace ProfitDistribution.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

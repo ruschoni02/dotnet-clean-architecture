@@ -6,11 +6,7 @@ namespace ProfitDistribution.Api.App.Http.Response
     {
         public static JsonResult Success(object data = null)
         {
-            var response = new JsonResult(new
-            {
-                Data = data,
-            });
-            return response;
+            return new JsonResult(data);
         }
 
         public static JsonResult Error(string message = "Internal Server Error", int statusCode = 500)

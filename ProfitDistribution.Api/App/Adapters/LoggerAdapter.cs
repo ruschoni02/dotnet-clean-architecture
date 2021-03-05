@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
 using ProfitDistribution.Api.Core.Dependencies.Gateways;
 
 namespace ProfitDistribution.Api.App.Adapters
@@ -12,19 +13,19 @@ namespace ProfitDistribution.Api.App.Adapters
             _logger = logger;
         }
 
-        void LoggerGateway.Debug(string message)
+        public void Debug(string message)
         {
             _logger.LogDebug(message);
         }
 
-        void LoggerGateway.Error(string message)
+        public void Error(string message, System.Exception exception)
         {
-            _logger.LogError(message);
+            _logger.LogError(message + " {exception}", JsonConvert.SerializeObject(exception));
         }
 
-        void LoggerGateway.Info(string message)
+        public void Info(string message, object data = null)
         {
-            _logger.LogInformation(message);
+            _logger.LogInformation(message, JsonConvert.SerializeObject(data));
         }
     }
 }

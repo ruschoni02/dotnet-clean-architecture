@@ -1,8 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProfitDistribution.Api.App.Adapters;
+using ProfitDistribution.Api.App.Database;
 using ProfitDistribution.Api.App.Http.Response;
 using ProfitDistribution.Api.Core.Modules.Distribution;
+using ProfitDistribution.Api.App.Http.Requests.Distribution;
+using ProfitDistribution.Api.App.Http.Presenters.Distribution;
+using ProfitDistribution.Api.App.Adapters.Modules.Distribution;
+using ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationInfluence;
 
 namespace ProfitDistribution.Api.App.HttpControllers
 {
@@ -18,13 +23,28 @@ namespace ProfitDistribution.Api.App.HttpControllers
         }
 
         [HttpPost]
-        public JsonResult Distribution()
+        public ActionResult Distribution([FromServices] InMemoryDataContext context, [FromBody] DistributionRequest request)
         {
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
-                var useCase = new UseCase(_logger);
-                useCase.Execute(new Core.Modules.Distribution.Request());
-                return JsonResponse.Success();
+                var useCase = new UseCase(
+                    _logger,
+                    new EmployeeAdapter(context),
+                    new CalculationInfluenceAdapter(
+                        new AreaCalculator(),
+                        new SalaryCalculator(),
+                        new AdmissionAtCalculator()
+                    )
+                );
+                var response = useCase.Execute(new Request(
+                    request.AvailableValue
+                ));
+                return JsonResponse.Success((new DistributionPresenter(response)).present());
             }
             catch (System.Exception exception)
             {

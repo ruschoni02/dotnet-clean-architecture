@@ -3,3 +3,6 @@ up:
 
 test:
 	dotnet test
+
+coverage:
+	dotnet test --collect:"XPlat Code Coverage"

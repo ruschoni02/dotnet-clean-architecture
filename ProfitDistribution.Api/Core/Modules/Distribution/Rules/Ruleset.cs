@@ -1,4 +1,6 @@
-﻿namespace ProfitDistribution.Api.Core.Modules.Distribution.Rules
+﻿using ProfitDistribution.Api.Core.Modules.Distribution.Exceptions;
+
+namespace ProfitDistribution.Api.Core.Modules.Distribution.Rules
 {
     public class Ruleset
     {
@@ -27,6 +29,10 @@
                 var participation = _calculateParticipationRule.Execute(employee, calculationInfluence);
                 distribution.Participations.Add(participation);
                 distribution.TotalDistributed += participation.Value;
+
+                if(distribution.TotalDistributed > request.AvailableValue) {
+                    throw new InsufficientAvailableValueException();
+                }
             }
 
             return distribution;

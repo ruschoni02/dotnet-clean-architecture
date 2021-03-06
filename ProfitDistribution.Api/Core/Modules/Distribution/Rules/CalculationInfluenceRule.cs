@@ -20,6 +20,10 @@ namespace ProfitDistribution.Api.Core.Modules.Distribution.Rules
             {
                 return _calculationInfluenceGateway.GetCalculationInfluence(employee);
             }
+            catch (CalculationInfluenceAreaNotFoundException exception)
+            {
+                throw exception;
+            }
             catch (Exception exception)
             {
                 throw new GetCalculationInfluenceException(exception);

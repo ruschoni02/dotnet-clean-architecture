@@ -8,6 +8,7 @@ using ProfitDistribution.Api.App.Http.Requests.Distribution;
 using ProfitDistribution.Api.App.Http.Presenters.Distribution;
 using ProfitDistribution.Api.App.Adapters.Modules.Distribution;
 using ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationInfluence;
+using ProfitDistribution.Api.Core.Modules.Distribution.Exceptions;
 
 namespace ProfitDistribution.Api.App.HttpControllers
 {
@@ -45,6 +46,10 @@ namespace ProfitDistribution.Api.App.HttpControllers
                     request.AvailableValue
                 ));
                 return JsonResponse.Success((new DistributionPresenter(response)).present());
+            }
+            catch (InsufficientAvailableValueException exception)
+            {
+                return JsonResponse.Error(exception.Message, 400);
             }
             catch (System.Exception exception)
             {

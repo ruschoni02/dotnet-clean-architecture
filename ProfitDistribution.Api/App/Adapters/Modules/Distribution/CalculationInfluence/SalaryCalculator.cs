@@ -12,17 +12,17 @@ namespace ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationIn
 
         public int Calculate(Employee employee)
         {
-            if (MINIMAL_SALARY_8 > employee.Salary)
+            if (employee.Salary > MINIMAL_SALARY_8)
             {
                 return 5;
             }
 
-            if (MINIMAL_SALARY_5 > employee.Salary)
+            if (employee.Salary > MINIMAL_SALARY_5)
             {
                 return 3;
             }
 
-            if (MINIMAL_SALARY_3 > employee.Salary)
+            if (employee.Salary > MINIMAL_SALARY_3)
             {
                 return 2;
             }

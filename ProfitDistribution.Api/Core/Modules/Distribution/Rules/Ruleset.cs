@@ -30,7 +30,8 @@ namespace ProfitDistribution.Api.Core.Modules.Distribution.Rules
                 distribution.Participations.Add(participation);
                 distribution.TotalDistributed += participation.Value;
 
-                if(distribution.TotalDistributed > request.AvailableValue) {
+                if (distribution.TotalDistributed > request.AvailableValue)
+                {
                     throw new InsufficientAvailableValueException();
                 }
             }

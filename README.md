@@ -24,6 +24,15 @@ Para rodar os testes:
 dotnet test
 ```
 
+## Linter
+
+Para rodar o linter, é necessário fazer a instalação do mesmo no seu ambiente.
+
+```
+dotnet tool update -g dotnet-format
+dotnet format --check
+```
+
 ## Makefile
 
 O projeto conta com suporte de Makefile. Nele temos os seguintes comandos:
@@ -31,6 +40,7 @@ O projeto conta com suporte de Makefile. Nele temos os seguintes comandos:
 - `make up`: Para subir a api utilizando o docker
 - `make test`: Para rodar os testes unitários
 - `make coverage`: Para rodar os testes com análise de cobertura
+- `make lint`: Para rodar o linter nos projetos
 
 ## Serviços
 

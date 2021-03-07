@@ -34,7 +34,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         {
             var employee = Stubs.ValidEmployee();
             var request = Stubs.ValidRequest();
-            _employeeGatewayMock.List().Returns(new List<Employee>(){employee});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { employee });
 
             var useCase = new UseCase(
                 _loggerGatewayMock,
@@ -54,7 +54,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         {
             var employee = Stubs.ValidEmployee();
             var request = Stubs.ValidRequest();
-            _employeeGatewayMock.List().Returns(new List<Employee>(){employee, employee});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { employee, employee });
 
             var useCase = new UseCase(
                 _loggerGatewayMock,
@@ -74,7 +74,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         [Fact]
         public void TestShouldReturnInsufficientAvailableValueException()
         {
-            _employeeGatewayMock.List().Returns(new List<Employee>(){Stubs.ValidEmployee()});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { Stubs.ValidEmployee() });
 
             var useCase = new UseCase(
                 _loggerGatewayMock,
@@ -89,7 +89,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         public void TestShouldReturnCalculateParticipationException()
         {
             var employee = Stubs.ValidEmployee();
-            _employeeGatewayMock.List().Returns(new List<Employee>(){employee});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { employee });
             var calculationInfluenceGatewayMock = Substitute.For<CalculationInfluenceGateway>();
             calculationInfluenceGatewayMock.GetCalculationInfluence(employee).Returns(new CalculationInfluence(1, 0, 5));
 
@@ -105,7 +105,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         [Fact]
         public void TestShouldReturnCalculationInfluenceAreaNotFoundException()
         {
-            _employeeGatewayMock.List().Returns(new List<Employee>(){Stubs.EmployeeWithInvalidArea()});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { Stubs.EmployeeWithInvalidArea() });
 
             var useCase = new UseCase(
                 _loggerGatewayMock,
@@ -134,7 +134,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         public void TestShouldReturnGetCalculationInfluenceException()
         {
             var employee = Stubs.ValidEmployee();
-            _employeeGatewayMock.List().Returns(new List<Employee>(){employee});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { employee });
             var calculationInfluenceGatewayMock = Substitute.For<CalculationInfluenceGateway>();
             calculationInfluenceGatewayMock.GetCalculationInfluence(employee).Returns(x => { throw new Exception(); });
 
@@ -150,7 +150,7 @@ namespace ProfitDistribution.Tests.Core.Modules.Distribution
         [Fact]
         public void TestShouldReturnGenericException()
         {
-            _employeeGatewayMock.List().Returns(new List<Employee>(){Stubs.ValidEmployee()});
+            _employeeGatewayMock.List().Returns(new List<Employee>() { Stubs.ValidEmployee() });
             _loggerGatewayMock.When(fake => fake.Info(Arg.Any<string>())).Do(call => { throw new Exception("Generic exception"); });
 
             var useCase = new UseCase(

@@ -13,19 +13,19 @@ namespace ProfitDistribution.Api.App.Http.Presenters.Distribution
             _participationsPresenter = new ParticipationsPresenter(_response.Distribution.Participations);
         }
 
-        public object present()
+        public object Present()
         {
             return new
             {
-                participacoes = _participationsPresenter.present(),
+                participacoes = _participationsPresenter.Present(),
                 total_de_funcionarios = _response.Distribution.Participations.Count,
-                total_distribuido =  formatToReal(_response.Distribution.TotalDistributed),
-                total_disponibilizado = formatToReal(_response.Distribution.TotalAvailable),
-                saldo_total_disponibilizado = formatToReal(_response.Distribution.TotalAvailable - _response.Distribution.TotalDistributed),
+                total_distribuido = FormatToReal(_response.Distribution.TotalDistributed),
+                total_disponibilizado = FormatToReal(_response.Distribution.TotalAvailable),
+                saldo_total_disponibilizado = FormatToReal(_response.Distribution.TotalAvailable - _response.Distribution.TotalDistributed),
             };
         }
 
-        private string formatToReal(long money)
+        private string FormatToReal(long money)
         {
             return MoneyAdapter.FormatToReal(money);
         }

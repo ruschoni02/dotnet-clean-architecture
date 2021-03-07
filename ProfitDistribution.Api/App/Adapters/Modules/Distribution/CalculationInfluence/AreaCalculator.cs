@@ -19,8 +19,9 @@ namespace ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationIn
         public int Calculate(Employee employee)
         {
             var area = Areas.FirstOrDefault(x => x.Key == employee.Area).Value;
-            if(area == 0) {
-                 throw new CalculationInfluenceAreaNotFoundException(employee.Area);
+            if (area == 0)
+            {
+                throw new CalculationInfluenceAreaNotFoundException(employee.Area);
             }
             return Areas.FirstOrDefault(x => x.Key == employee.Area).Value;
         }

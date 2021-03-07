@@ -8,8 +8,8 @@ using ProfitDistribution.Api.Core.Modules.Distribution;
 using ProfitDistribution.Api.App.Http.Requests.Distribution;
 using ProfitDistribution.Api.App.Http.Presenters.Distribution;
 using ProfitDistribution.Api.App.Adapters.Modules.Distribution;
-using ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationInfluence;
 using ProfitDistribution.Api.Core.Modules.Distribution.Exceptions;
+using ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationInfluence;
 
 namespace ProfitDistribution.Api.App.HttpControllers
 {
@@ -44,7 +44,7 @@ namespace ProfitDistribution.Api.App.HttpControllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult Distribution([FromServices] InMemoryDataContext context, [FromBody] DistributionRequest request)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -63,7 +63,7 @@ namespace ProfitDistribution.Api.App.HttpControllers
                 var response = useCase.Execute(new Request(
                     request.AvailableValue
                 ));
-                return JsonResponse.Success((new DistributionPresenter(response)).present());
+                return JsonResponse.Success((new DistributionPresenter(response)).Present());
             }
             catch (InsufficientAvailableValueException exception)
             {

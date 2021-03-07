@@ -13,7 +13,7 @@ namespace ProfitDistribution.Api.App.Http.Presenters.Distribution
             _participations = participations;
         }
 
-        public List<object> present()
+        public List<object> Present()
         {
             var presenter = new List<object>();
 
@@ -23,14 +23,14 @@ namespace ProfitDistribution.Api.App.Http.Presenters.Distribution
                 {
                     matricula = participation.Employee.Registration,
                     nome = participation.Employee.Name,
-                    valor_da_participação = formatToReal(participation.Value),
+                    valor_da_participação = FormatToReal(participation.Value),
                 });
             }
 
             return presenter;
         }
 
-        private string formatToReal(int money)
+        private string FormatToReal(int money)
         {
             return MoneyAdapter.FormatToReal(money);
         }

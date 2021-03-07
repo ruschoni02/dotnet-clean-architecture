@@ -6,3 +6,6 @@ test:
 
 coverage:
 	dotnet test --collect:"XPlat Code Coverage"
+
+lint:
+	dotnet format --check

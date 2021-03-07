@@ -5,7 +5,6 @@ namespace ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationIn
     public class SalaryCalculator : CalculatorGateway
     {
         private const int MINIMAL_SALARY = 110000;
-
         private const int MINIMAL_SALARY_8 = MINIMAL_SALARY * 8;
         private const int MINIMAL_SALARY_5 = MINIMAL_SALARY * 5;
         private const int MINIMAL_SALARY_3 = MINIMAL_SALARY * 3;

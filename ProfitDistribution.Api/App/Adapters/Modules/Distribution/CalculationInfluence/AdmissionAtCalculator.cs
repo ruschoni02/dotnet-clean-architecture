@@ -5,23 +5,21 @@ namespace ProfitDistribution.Api.App.Adapters.Modules.Distribution.CalculationIn
 {
     public class AdmissionAtCalculator : CalculatorGateway
     {
-        private DateTime EightYears = DateTime.Now.AddYears(8);
-        private DateTime ThreeYears = DateTime.Now.AddYears(3);
-        private DateTime OneYear = DateTime.Now.AddYears(1);
+        private DateTime Today = DateTime.Now;
 
         public int Calculate(Employee employee)
         {
-            if (EightYears > employee.AdmissionAt)
+            if (Today > employee.AdmissionAt.AddYears(8))
             {
                 return 5;
             }
 
-            if (ThreeYears > employee.AdmissionAt)
+            if (Today > employee.AdmissionAt.AddYears(3))
             {
                 return 3;
             }
 
-            if (OneYear > employee.AdmissionAt)
+            if (Today > employee.AdmissionAt.AddYears(1))
             {
                 return 2;
             }

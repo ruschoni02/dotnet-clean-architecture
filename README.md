@@ -13,3 +13,21 @@ Para utilização do docker, precisamos rodar o seguinte comando:
 ```
 docker-compose up --build
 ```
+
+## Testes unitários
+
+Os testes unitários estão cobrindo nosso caso de uso para garantir nossas regras de negócio.
+
+Para rodar os testes:
+
+```
+dotnet test
+```
+
+## Makefile
+
+O projeto conta com suporte de Makefile. Nele temos os seguintes comandos:
+
+- `make up`: Para subir a api utilizando o docker
+- `make test`: Para rodar os testes unitários
+- `make coverage`: Para rodar os testes com análise de cobertura

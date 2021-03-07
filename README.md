@@ -31,3 +31,13 @@ O projeto conta com suporte de Makefile. Nele temos os seguintes comandos:
 - `make up`: Para subir a api utilizando o docker
 - `make test`: Para rodar os testes unitários
 - `make coverage`: Para rodar os testes com análise de cobertura
+
+## Serviços
+
+Para verificarmos os serviços da api e seus acessos, podemos acessar a documentação do Swagger
+
+Para isso, acesse a url após subir a api
+
+```
+http://localhost:5001
+```

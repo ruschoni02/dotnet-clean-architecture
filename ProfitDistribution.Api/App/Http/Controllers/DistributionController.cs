@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using ProfitDistribution.Api.App.Adapters;
 using ProfitDistribution.Api.App.Database;
@@ -23,7 +24,24 @@ namespace ProfitDistribution.Api.App.HttpControllers
             _logger = new LoggerAdapter(logger);
         }
 
+        /// <summary>
+        /// Generates profit distribution from an input value for distribution
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /distribution
+        ///     {
+        ///        "available_value": 500000022
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">A distribution report</response>
+        /// <response code="400">If the available value is insufficient</response>  
+        /// <response code="500">To internal server erros</response>  
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult Distribution([FromServices] InMemoryDataContext context, [FromBody] DistributionRequest request)
         {
             if(!ModelState.IsValid)

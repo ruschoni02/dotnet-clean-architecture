@@ -10,11 +10,12 @@ namespace ProfitDistribution.Api.Core.Modules.Distribution.Rules
         {
             try
             {
-                var participation = employee.Salary * calculationInfluence.AdmissionAtInfluence;
-                participation += employee.Salary * calculationInfluence.AreaInfluence;
+                var salary = Math.Round(Convert.ToDecimal(employee.Salary), 5);
+                var participation = salary * calculationInfluence.AdmissionAtInfluence;
+                participation += salary * calculationInfluence.AreaInfluence;
                 participation /= calculationInfluence.SalaryInfluence;
                 participation *= 12;
-                return new Participation(employee, participation);
+                return new Participation(employee, (int)Math.Round(participation, 0));
             }
             catch (Exception exception)
             {

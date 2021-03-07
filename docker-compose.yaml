@@ -7,4 +7,4 @@ services:
       context: .
       dockerfile: ProfitDistribution.Api/docker/Dockerfile
     ports:
-      - "5001:80"
+      - "5000:80"
